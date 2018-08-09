@@ -1,6 +1,7 @@
 {
   "name": "svg-path-resize",
   "version": "0.0.1",
+  "module":"index",
   "dependencies": {
     "raphael": "^2.2.7"
   }
