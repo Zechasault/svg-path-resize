@@ -1,7 +1,11 @@
 {
   "name": "svg-path-resize",
-  "version": "0.0.1",
-  "module":"index",
+  "version": "0.0.2",
+  "main": "dist/svg-path-resize.js",
+  "unpkg": "dist/svg-path-resize.js",
+  "jsdelivr": "dist/svg-path-resize.js",
+  "module": "index",
+  "jsnext:main": "index",
   "dependencies": {
     "raphael": "^2.2.7"
   }

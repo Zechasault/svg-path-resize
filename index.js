@@ -1,6 +1,6 @@
 import {Raphael} from "raphael"
 
-export function rescalePath(path, finalPathWidth, finalPathHeight, normalizeX, normalizeY) {
+export function resizePath(path, finalPathWidth, finalPathHeight, normalizeX, normalizeY) {
     let pathBBox = Raphael.pathBBox(path);
 
     let ratiow = finalPathWidth / (pathBBox.width + (normalizeX ? 0 : pathBBox.x * 2));
@@ -99,7 +99,6 @@ function parse(path) {
     });
     return data;
 }
-
 
 let number = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/gi;
 
