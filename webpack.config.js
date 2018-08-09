@@ -2,7 +2,7 @@
 module.exports = {
     entry: './index.js',
     output: {
-        filename: './dist/svg-path-resize.js',
+        filename: './svg-path-resize.js',
         libraryTarget: 'umd',
         library: 'resizePath'
     }
