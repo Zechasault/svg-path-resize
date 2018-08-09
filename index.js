@@ -1,6 +1,6 @@
 import Raphael from "raphael"
 
-module.exports = function resizePath(path, finalPathWidth, finalPathHeight, normalizeX, normalizeY) {
+export function resizePath(path, finalPathWidth, finalPathHeight, normalizeX, normalizeY) {
     let pathBBox = Raphael.pathBBox(path);
 
     let ratiow = finalPathWidth / (pathBBox.width + (normalizeX ? 0 : pathBBox.x * 2));
