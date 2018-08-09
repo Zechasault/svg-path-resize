@@ -1,16 +1,12 @@
-import {Raphael} from "raphael"
+import Raphael from "raphael"
 
-export function resizePath(path, finalPathWidth, finalPathHeight, normalizeX, normalizeY) {
+module.exports = function resizePath(path, finalPathWidth, finalPathHeight, normalizeX, normalizeY) {
     let pathBBox = Raphael.pathBBox(path);
 
     let ratiow = finalPathWidth / (pathBBox.width + (normalizeX ? 0 : pathBBox.x * 2));
     let ratioh = finalPathHeight / (pathBBox.height + (normalizeY ? 0 : pathBBox.y * 2));
 
-    let ratio = pathBBox.height === 0
-            ? ratiow
-            : pathBBox.width === 0
-            ? ratioh
-            : Math.min(ratiow, ratioh);
+    let ratio = pathBBox.height === 0 ? ratiow : pathBBox.width === 0 ? ratioh : Math.min(ratiow, ratioh);
 
     let parsedPath = parse(path);
 
@@ -50,7 +46,7 @@ export function resizePath(path, finalPathWidth, finalPathHeight, normalizeX, no
     let t = scaledPath.map(d => d.join(" "));
 
     return t.join(" ");
-}
+};
 
 function parse(path) {
     /**
